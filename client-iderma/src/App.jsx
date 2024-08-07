@@ -1,16 +1,17 @@
-import { useState } from 'react'
-import './index.css'
+import { Route, Routes } from 'react-router-dom';
+import './index.css';
+import Navbar from './components/Navbar';
+import Home from './views/Home';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-     <div className='color-text-black-50'>
-      frontend levantado
-     </div>
-    </>
-  )
+	return (
+		<>
+			<Navbar />
+			<Routes>
+				<Route path="/" element={<Home />} />
+			</Routes>
+		</>
+	);
 }
 
-export default App
+export default App;
