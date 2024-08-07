@@ -5,6 +5,7 @@ import { createServer } from 'http';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 const { PORT } = process.env;
+import routes from './src/routes/index.js';
 
 dotenv.config();
 
@@ -19,12 +20,12 @@ app.use('/', routes);
 
 app.get('/', (_req, res) => res.status(200).send('Server running'));
 
-connectToDatabase()
-	.then(() => {
-		server.listen(PORT, () => {
-			console.log(`Server running on port ${PORT}`);
-		});
-	})
-	.catch((error) => {
-		console.error('Error connecting to database', error);
-	});
+// connectToDatabase()
+// 	.then(() => {
+// 		server.listen(PORT, () => {
+// 			console.log(`Server running on port ${PORT}`);
+// 		});
+// 	})
+// 	.catch((error) => {
+// 		console.error('Error connecting to database', error);
+// 	});
