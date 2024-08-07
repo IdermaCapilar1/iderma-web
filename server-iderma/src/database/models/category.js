@@ -1,5 +1,5 @@
 // En models/category.js
-import SubCategory from './subCategory.js';
+import SubCategory from './product.js';
 import { DataTypes } from 'sequelize';
 import sequelize from '../database.js';
 

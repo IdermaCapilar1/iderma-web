@@ -2,7 +2,7 @@ import { DataTypes } from 'sequelize';
 import sequelize from '../database.js';
 import Category from './category.js';
 
-const SubCategory = sequelize.define('SubCategory', {
+const Product = sequelize.define('Product', {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -15,6 +15,9 @@ const SubCategory = sequelize.define('SubCategory', {
     url: {
         type: DataTypes.STRING(255)
     },
+    description: {
+        type: DataTypes.STRING(255)
+    },
     categoryId: {
         type: DataTypes.INTEGER,
         references: {
@@ -23,11 +26,11 @@ const SubCategory = sequelize.define('SubCategory', {
         }
     }
 }, {
-    tableName: 'sub_category',
+    tableName: 'product',
     timestamps: true // Desactiva los timestamps si no los necesitas
 });
 
 // Establecer la relación
-SubCategory.belongsTo(Category, { foreignKey: 'categoryId' });
+Product.belongsTo(Product, { foreignKey: 'categoryId' });
 
-export default SubCategory;
+export default Product;
