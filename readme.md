@@ -19,15 +19,19 @@ API IDERMA
 // -------- BACKEND ---------------//
 
 category
+-------------------
 id (pk)
 name (varchar 150)
 description (varchar 255)
 url (varchar 255)
 
-sub_category
--id (pk)
--name varhcar(150)
--url (varchar 255)
+productos
+--------------------
+id
+name
+description
+url
+fk_categoria
 
 slider_navbar
 -id (pk)
