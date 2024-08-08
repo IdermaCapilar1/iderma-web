@@ -26,7 +26,7 @@ const connectToDatabase = async () => {
 		});
 
 		// Si necesitas sincronizar Sequelize después de la conexión
-		await sequelize.sync({ force: true });
+		await sequelize.sync({ alter: true });
 	} catch (err) {
 		// Maneja el error aquí
 		console.error('Error connecting to the database:', err);
