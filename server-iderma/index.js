@@ -7,7 +7,8 @@ import dotenv from 'dotenv';
 const { PORT } = process.env;
 import routes from './src/routes/index.js';
 import connectionToDataBase from './src/database/index.js';
-
+import sequelize from '../server-iderma/src/database/models/database.js'
+import './src/database/models/associations.js'; 
 dotenv.config();
 
 const app = express();
@@ -20,6 +21,19 @@ app.use(bodyParser.json());
 app.use('/', routes);
 
 app.get('/', (_req, res) => res.status(200).send('Server running'));
+
+
+
+// Sincronizar modelos con la base de datos
+const syncModels = async () => {
+    try {
+        await sequelize.sync({ force: true });  // 'force: true' elimina las tablas existentes y las vuelve a crear
+        console.log('Modelos sincronizados con la base de datos');
+    } catch (error) {
+        console.error('Error sincronizando los modelos con la base de datos:', error);
+    }
+};
+
 
 connectionToDataBase()
 	.then(() => {

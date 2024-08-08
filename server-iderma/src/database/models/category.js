@@ -1,9 +1,7 @@
 // En models/category.js
-import SubCategory from './product.js';
 import { DataTypes } from 'sequelize';
-import sequelize from '../database.js';
-
-Category.hasMany(SubCategory, { foreignKey: 'categoryId' });
+import sequelize from '../models/database.js';
+// import Product from './product.js';
 
 const Category = sequelize.define('Category', {
     id: {
@@ -24,5 +22,7 @@ const Category = sequelize.define('Category', {
 }, {
     tableName: 'category', // Desactiva los timestamps si no los necesitas
 });
+
+// Category.hasMany(Product, { foreignKey: 'categoryId' });
 
 export default Category;
