@@ -27,7 +27,7 @@ app.get('/', (_req, res) => res.status(200).send('Server running'));
 // Sincronizar modelos con la base de datos
 const syncModels = async () => {
     try {
-        await sequelize.sync({ force: true });  // 'force: true' elimina las tablas existentes y las vuelve a crear
+          // 'force: true' elimina las tablas existentes y las vuelve a crear
         console.log('Modelos sincronizados con la base de datos');
     } catch (error) {
         console.error('Error sincronizando los modelos con la base de datos:', error);

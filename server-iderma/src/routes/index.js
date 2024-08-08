@@ -4,6 +4,6 @@ import productRoutes from './productRoutes.js'
 const router = Router();
 
 router.use('/categories', categoryRoutes)
-router.use('/prodcuts', productRoutes)
+router.use('/products', productRoutes)
 
 export default router;
