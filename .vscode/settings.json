@@ -9,7 +9,7 @@
     "editor.stickyScroll.enabled": true,
     "editor.cursorSmoothCaretAnimation": "on",
     "workbench.iconTheme": "material-icon-theme",
-    "editor.matchBrackets": false,
+    "editor.matchBrackets": "never",
     "editor.hideCursorInOverviewRuler": true,
     "editor.overviewRulerBorder": false,
     "workbench.colorTheme": "One Dark Pro Darker",
@@ -90,7 +90,6 @@
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "bootstrapIntelliSense.version": "Bootstrap v4.6",
-    "files.autoSave": "off",
     "[scss]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },

@@ -8,22 +8,24 @@ const Category = sequelize.define(
 	{
 		id: {
 			type: DataTypes.INTEGER,
-			autoIncrement: true,
-			primaryKey: true
+			primaryKey: true,
+			allowNull: false
 		},
 		name: {
 			type: DataTypes.STRING(150),
 			allowNull: false
 		},
 		description: {
-			type: DataTypes.STRING(255)
+			type: DataTypes.STRING(255),
+			allowNull: false
 		},
-		url: {
-			type: DataTypes.STRING(255)
+		imageUrl: {
+			type: DataTypes.STRING(255),
+			allowNull: false
 		}
 	},
 	{
-		tableName: 'category' // Desactiva los timestamps si no los necesitas
+		tableName: 'category'
 	}
 );
 
