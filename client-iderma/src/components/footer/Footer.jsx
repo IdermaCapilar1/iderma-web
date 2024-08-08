@@ -8,14 +8,16 @@ import { AiOutlineYoutube } from "react-icons/ai";
 
 function Footer() {
   return (
-    <div className="footer-background flex h-[350px] items-center justify-center p-4 text-white">
-      <div className="flex w-full items-center justify-evenly">
-        <img
-          src="/svg/logo-footer-white.svg"
-          alt="logo"
-          className="h-[140px]"
-        ></img>
-        <div className="mx-5 w-[230px] text-sm">
+    <div className="footer-background fixed bottom-0 flex w-full flex-col items-center p-3 text-white">
+      <div className="flex h-[190px] w-full justify-evenly py-3">
+        <div className="relative">
+          <img
+            src="/svg/logo-footer-white.svg"
+            alt="logo"
+            className="h-[100px]"
+          />
+        </div>
+        <div className="mx-5 flex w-[230px] items-center text-sm">
           <h3>
             Nuestra trayectoria de contianza: más de 250 000 pacientes
             satisfechos. Los resultados hablan por si mismos. Médicos altamente
@@ -23,7 +25,7 @@ function Footer() {
           </h3>
         </div>
         {/* enlaces directos */}
-        <div className="flex flex-col ">
+        <div className="flex flex-col">
           <h1 className="font-bold">Enlaces directos</h1>
           <div className="flex items-center">
             <Link to={"#"}>Shop</Link>
@@ -62,13 +64,16 @@ function Footer() {
           </div>
         </div>
         {/* Socials section */}
-        <div className="flex flex-col">
-          <FaFacebookF className="my-2" />
-          <FaInstagram className="my-2" />
-          <FaTiktok className="my-2" />
-          <AiOutlineYoutube className="my-2" />
+        <div className="flex flex-col opacity-50">
+          <FaFacebookF size={30} className="my-2" />
+          <FaInstagram size={30} className="my-2" />
+          <FaTiktok size={30} className="my-2" />
+          <AiOutlineYoutube size={30} className="my-2" />
         </div>
       </div>
+      <p className="text-sm opacity-25">
+        All rigth reserved to Iderma Capilar. Copyright° 2024
+      </p>
     </div>
   );
 }
