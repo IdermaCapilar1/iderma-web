@@ -5,8 +5,8 @@ export default {
     extend: {
       extend: {
         fontFamily: {
-          gatchye: ["Gatchye", "sans-serif"],
-          gilroy: ["Golroy", "sans-serif"],
+          'Catchye': ["Catchye", "sans-serif"],
+          'gilroy': ["Golroy", "sans-serif"],
         },
       },
     },

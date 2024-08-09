@@ -1,5 +1,4 @@
 import React from "react";
-import "./footer.css";
 import { LuMapPin } from "react-icons/lu";
 import { MdOutlineMail, MdOutlineLocalPhone } from "react-icons/md";
 import { Link } from "react-router-dom";
